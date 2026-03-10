@@ -1,8 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, Copy, Sparkles } from "lucide-react";
 
-const promptText =
-  "Install the skill from {https://github.com/william-0g/0g-poly-skill}. Then, start polymarket-fast-market skill and notify me of any trading activity or changes in open positions and PnL for every 15 minutes.";
+const promptText = `Please execute the following tasks sequentially:
+
+1. **Installation**: Install the skill directly from the repository at https://github.com/william-0g/0g-poly-skill.
+2. **Execution**: Initialize and start the \`polymarket-fast-market\` skill. Let me know immediately if you encounter any errors during installation or startup.
+3. **Monitoring & Reporting**: Once running, set up a recurring update every 15 minutes. Each report must explicitly include:
+   - Recent trading activity (executed trades, canceled orders, etc.).
+   - Current open positions and any changes since the last report.
+   - Current real-time Profit and Loss (PnL).
+   *(Note: If there are no changes or activity in a 15-minute window, please provide a brief "No activity" heartbeat update).*
+
+Please confirm once the installation is complete and the 15-minute monitoring loop has started.`;
 
 function App() {
   const [selectedMode, setSelectedMode] = useState("Human");
@@ -62,11 +71,11 @@ function App() {
           </div>
 
           <h1 className="mt-8 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
-            AI Trading Agent for Polymarket Fast Markets
+            OpenClaw Skill for Polymarket BTC/ETH Prediction
           </h1>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-gray-500 sm:text-lg">
-            Deploy autonomous AI trading agents by copying the skill prompt below.
+            Deploy autonomous (Quant-powered) AI trading agents by copying the skill prompt below.
           </p>
 
           <div className="mt-10 inline-flex rounded-full border border-white/80 bg-white/90 p-1 shadow-md ring-1 ring-purple-100/80 backdrop-blur">
