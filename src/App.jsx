@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, Copy, Sparkles } from "lucide-react";
 
 const promptText =
-  "Give your agent this URL {https://your-domain.com/skill.md} and ask it to follow the instructions to get authenticated and start using the Skill.";
+  "Install the skill from {https://github.com/william-0g/0g-poly-skill}. Then, start polymarket-fast-market skill and notify me of any trading activity or changes in open positions and PnL for every 15 minutes.";
 
 function App() {
   const [selectedMode, setSelectedMode] = useState("Human");
@@ -45,26 +45,28 @@ function App() {
       <main className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-6 sm:px-10 lg:px-12">
         <nav className="flex items-start justify-start">
           <a
-            href="/"
+            href="https://0g.ai"
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-purple-200 hover:text-purple-700"
           >
             <ArrowLeft className="h-4 w-4" />
-            Back to Home
+            Back to 0G.ai
           </a>
         </nav>
 
         <section className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center py-12 text-center sm:py-16">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-100 bg-white/80 px-4 py-2 text-sm text-purple-700 shadow-sm backdrop-blur">
             <Sparkles className="h-4 w-4" />
-            Web3-ready installation flow
+            Let your OpenClaw make money autonomously.
           </div>
 
           <h1 className="mt-8 bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
-            Agent Skill Installer
+            AI Trading Agent for Polymarket Fast Markets
           </h1>
 
           <p className="mt-4 max-w-2xl text-base leading-7 text-gray-500 sm:text-lg">
-            Deploy autonomous agents by copying the skill prompt below.
+            Deploy autonomous AI trading agents by copying the skill prompt below.
           </p>
 
           <div className="mt-10 inline-flex rounded-full border border-white/80 bg-white/90 p-1 shadow-md ring-1 ring-purple-100/80 backdrop-blur">
