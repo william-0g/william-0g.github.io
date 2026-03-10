@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft, Copy, Sparkles } from "lucide-react";
+import { Copy, Sparkles } from "lucide-react";
 
 const promptText = `Please execute the following tasks sequentially:
 
@@ -51,20 +51,8 @@ function App() {
         <div className="absolute left-1/2 top-1/3 h-48 w-48 -translate-x-1/2 rounded-full bg-fuchsia-100/30 blur-3xl" />
       </div>
 
-      <main className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-6 sm:px-10 lg:px-12">
-        <nav className="flex items-start justify-start">
-          <a
-            href="https://0g.ai"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/90 px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition hover:border-purple-200 hover:text-purple-700"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Back to 0G.ai
-          </a>
-        </nav>
-
-        <section className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center py-12 text-center sm:py-16">
+      <main className="relative mx-auto flex min-h-screen max-w-6xl flex-col px-6 py-2 sm:px-10 sm:py-3 lg:px-12">
+        <section className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-start pt-1 text-center sm:pt-2">
           <div className="inline-flex items-center gap-2 rounded-full border border-purple-100 bg-white/80 px-4 py-2 text-sm text-purple-700 shadow-sm backdrop-blur">
             <Sparkles className="h-4 w-4" />
             Let your OpenClaw make money autonomously.
